@@ -195,3 +195,7 @@ summary(stemmed_matrix)
 
 topfeatures(stemmed_matrix, 100)
 
+set.seed(100)
+library("quanteda.textplots")
+textplot_wordcloud(stemmed_matrix, min_count = 6, random_order = FALSE, rotation = 0.25,
+                   color = RColorBrewer::brewer.pal(8, "Dark2"))
